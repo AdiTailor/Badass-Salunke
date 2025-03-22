@@ -60,7 +60,7 @@ const Login = () => {
 
         {/* Google Login */}
         <button
-          onClick={() => window.location.href = "http://localhost:5173/auth/google"}
+          onClick={() => window.open("http://localhost:5173/auth/google", "_self")}
           style={{
             width: "80%", display: "flex", alignItems: "center", justifyContent: "center",
             border: "1px solid #ccc", padding: "12px", borderRadius: "8px",

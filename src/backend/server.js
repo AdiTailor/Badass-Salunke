@@ -4,8 +4,12 @@ const session = require("express-session");
 const passport = require("passport");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const jwt = require("jsonwebtoken");
+const cors = require("cors");
 
 const app = express();
+
+// CORS Middleware (Allows frontend requests)
+app.use(cors({ origin: "http://localhost:5174", credentials: true }));
 
 // Session Middleware
 app.use(
@@ -59,23 +63,25 @@ app.get(
 // Google OAuth Callback Route
 app.get(
   "/auth/google/callback",
-  passport.authenticate("google", {
-    failureRedirect: "/login",
-  }),
+  passport.authenticate("google", { failureRedirect: "/login" }),
   (req, res) => {
-    // Generate JWT after successful authentication
-    const token = jwt.sign({ email: req.user.emails[0].value }, process.env.JWT_SECRET, {
-      expiresIn: "1h",
-    });
+    if (!req.user) {
+      return res.status(401).json({ error: "Authentication failed" });
+    }
 
-    res.json({ message: "Login successful", token });
+    // Generate JWT
+    const token = jwt.sign({ email: req.user.emails[0].value }, process.env.JWT_SECRET, { expiresIn: "1h" });
+
+    res.redirect(`http://localhost:5174/dashboard?token=${token}`);
   }
 );
 
 // Logout Route
-app.get("/logout", (req, res) => {
-  req.logout(() => {});
-  res.json({ message: "Logged out successfully" });
+app.get("/logout", (req, res, next) => {
+  req.logout((err) => {
+    if (err) return next(err);
+    res.json({ message: "Logged out successfully" });
+  });
 });
 
 // Protected Route Example
@@ -87,4 +93,6 @@ app.get("/protected", (req, res) => {
   }
 });
 
-app.listen(5173, () => console.log("Server running on http://localhost:5173"));
+// Start Server on Port 5000
+const PORT = process.env.PORT || 5173;
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
