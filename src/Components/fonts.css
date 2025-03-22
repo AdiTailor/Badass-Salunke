@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "LooneyTunes";
+    src: url("./Looney Tunes.ttf") format("truetype");
+    font-weight: bolder;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "PokemonHollow";
+    src: url("./Pokemon\ Solid.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+  .looney-title {
+    font-family: "LooneyTunes", sans-serif;
+    font-size: 100px;
+    font-weight: bold;  /* Makes the text thicker */
+    color: rgba(212, 210, 210, 0.818);
+    text-align: center;
+    position: relative;
+    top: 20px;
+}      
+
+  .pokemon {
+    font-family: "PokemonHollow", sans-serif;
+    font-size: 40px;
+    font-weight: bold;  /* Makes the text thicker */
+    color: rgba(238, 223, 24, 0.926);
+    text-align: center;
+    position: relative;
+    top: 580px;
+  }
