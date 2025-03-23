@@ -71,10 +71,10 @@ const Dashboard = () => {
     <div className="borg1" style={{ 
       backgroundColor: darkMode ? "#1a1a1a" : "white", 
       color: darkMode ? "white" : "black", 
-      minHeight: "100vh", 
+      minHeight: "145vh", 
       width: "100vw", 
       position: "relative",
-      overflowY: "auto",
+    
       paddingBottom: "7.19vh"
     }}>
       {/* Pink Box at Top Left */}
@@ -126,37 +126,167 @@ const Dashboard = () => {
       </button>
       </Link>
 
-      <div className="blanka1" style={{ 
-        position: "absolute", 
-        top: "2.16vh", 
-        right: "6.48vh", 
-        width: "172.66vh", 
-        height: "10.79vh", 
-        backgroundColor: "red", 
-        borderRadius: "1.15vh", 
-        display: "flex", 
-        alignItems: "center", 
-        justifyContent: "center", 
-      }}>
-        ROAD RUNNERS
+      <div className="blanka1" style={{ position: "absolute", top: "2.15vh", left: "43.45vh", width: "174vh", height: "10.79vh", backgroundColor: "red", borderRadius: "1.15vh", display: "flex", alignItems: "center", justifyContent: "center" ,fontSize:"7.63vh"}}>
+        ROAD-RUNNERS
       </div>
-       <div className = "blanka1" style={{ display: "flex", justifyContent: "space-between", position: "absolute", top: "15.83vh", right: "4.47vh", width: "172.66vh" }}>
-              {[bugs, tweety, sy, wile].map((image, index) => (
-                <div key={index} style={{ width: "40.28vh", height: "17.26vh", backgroundColor: "gray", borderRadius: "1.15vh", overflow: "hidden", position: "relative" }}>
-                  <img src={image} alt={`Image ${index + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.4 }} />
-                  <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "3.59vh", fontWeight: "bold", textAlign: "center", padding: "1.44vh" ,color:"#C5E500"}}>
-                    {["Reputation score: XX", "Active Complaints: XXX", "User Complaints: XX", "Registered Complaints: XX"][index]}
-                  </div>
-                </div>
-              ))}
-            </div>
+     
+      <div className="blanka1" style={{ 
+  position: "absolute", 
+  overflow : "hidden",
+  top: "15.75vh", 
+  left: "43.45vh", 
+  width: "38vh", 
+  height: "16vh", 
+  display: "flex", 
+  flexDirection: "column", 
+  alignItems: "center", 
+  justifyContent: "center", 
+  borderRadius: "1.15vh", 
+  border: "none", 
+  padding: "0.72vh", 
+  lineHeight: "1.5", 
+  zIndex: "1",
+  color: "#003366",
+  fontSize : "4.5vh",
+  textAlign: "center"
+}}>
+  <img 
+    src={bugs} 
+    alt="Road Runners Logo" 
+    style={{
+        width: "100%", 
+        height: "100%", 
+        objectFit: "cover", 
+        opacity: 0.4, 
+        position: "absolute", 
+        top: 0, 
+        left: 0, 
+        zIndex: "0"
+    }}
+  />
+  Reputation Score : <br/> XX
+</div>
+
+     
+<div className="blanka1" style={{ 
+  position: "absolute", 
+  overflow : "hidden",
+  top: "15.75vh", 
+  left: "88.45vh", 
+  width: "38vh", 
+  height: "16vh", 
+  display: "flex", 
+  flexDirection: "column", 
+  alignItems: "center", 
+  justifyContent: "center", 
+  borderRadius: "1.15vh", 
+  border: "none", 
+  padding: "0.72vh", 
+  lineHeight: "1.5", 
+  zIndex: "1",
+  color: "#003366",
+  fontSize : "4.5vh",
+  textAlign: "center"
+}}>
+  <img 
+    src={tweety} 
+    alt="Road Runners Logo" 
+    style={{
+        width: "100%", 
+        height: "100%", 
+        objectFit: "cover", 
+        opacity: 0.4, 
+        position: "absolute", 
+        top: 0, 
+        left: 0, 
+        zIndex: "0"
+    }}
+  />
+  Active Complaints : <br/> XXX
+</div>
         
+            
+<div className="blanka1" style={{ 
+  position: "absolute", 
+  overflow : "hidden",
+  top: "15.75vh", 
+  left: "133.45vh", 
+  width: "38vh", 
+  height: "16vh", 
+  display: "flex", 
+  flexDirection: "column", 
+  alignItems: "center", 
+  justifyContent: "center", 
+  borderRadius: "1.15vh", 
+  border: "none", 
+  padding: "0.72vh", 
+  lineHeight: "1.5", 
+  zIndex: "1",color: "#003366",
+  fontSize : "4.5vh",
+  textAlign: "center"
+}}>
+  <img 
+    src={sy} 
+    alt="Road Runners Logo" 
+    style={{
+        width: "100%", 
+        height: "100%", 
+        objectFit: "cover", 
+        opacity: 0.4, 
+        position: "absolute", 
+        top: 0, 
+        left: 0, 
+        zIndex: "0"
+    }}
+  />
+  User Complaints : <br/> XX
+</div>
+
+     
+<div className="blanka1" style={{ 
+  position: "absolute", 
+  overflow : "hidden",
+  top: "15.75vh", 
+  left: "178.45vh", 
+  width: "38vh", 
+  height: "16vh", 
+  display: "flex", 
+  flexDirection: "column", 
+  alignItems: "center", 
+  justifyContent: "center", 
+  borderRadius: "1.15vh", 
+  border: "none", 
+  padding: "0.72vh", 
+  lineHeight: "1.5", 
+  zIndex: "1",
+  color: "#003366",
+  fontSize : "4.5vh",
+  textAlign: "center"
+}}>
+  <img 
+    src={wile} 
+    alt="Road Runners Logo" 
+    style={{
+        width: "100%", 
+        height: "100%", 
+        objectFit: "cover", 
+        opacity: 0.4, 
+        position: "absolute", 
+        top: 0, 
+        left: 0, 
+        zIndex: "0"
+    }}
+  />
+  Registered Complaints : <br/> XX
+</div>
+
+
       <div style={{ 
         position: "absolute", 
         top: "38.85vh", 
         left: "110.79vh", 
         width: "100.72vh", 
-        height: "103.59vh", 
+        height: "102vh", 
         backgroundColor: "#D3D3D3", 
         borderRadius: "1.15vh", 
         display: "flex", 
@@ -208,6 +338,7 @@ const Dashboard = () => {
 
 <div className = "pulp" style ={{ 
   position: "absolute", 
+  overflow : "hidden",
   top: 0, 
   left: 0, 
   width: "100%", 
