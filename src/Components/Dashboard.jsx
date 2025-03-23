@@ -11,7 +11,6 @@ const Dashboard = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [selectedFile, setSelectedFile] = useState(null);
 
-
   const toggleMode = () => {
     setDarkMode(!darkMode);
   };
@@ -72,14 +71,14 @@ const Dashboard = () => {
     <div className="borg1" style={{ 
       backgroundColor: darkMode ? "#1a1a1a" : "white", 
       color: darkMode ? "white" : "black", 
-      minHeight: "100vh", 
+      minHeight: "145vh", 
       width: "100vw", 
       position: "relative",
-      overflowY: "auto",
-      paddingBottom: "50px" 
+      overflowX : "auto",
+      paddingBottom: "7.19vh"
     }}>
       {/* Pink Box at Top Left */}
-      <div className="borg1" style={{ position: "absolute", top: "15px", left: "45px", width: "200px", height: "75px", backgroundColor: "#EB1294", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <div className="borg1" style={{ position: "absolute", top: "2.15vh", left: "6.45vh", width: "28.77vh", height: "10.79vh", backgroundColor: "#EB1294", borderRadius: "1.15vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
         USER_NAME
       </div>
       
@@ -88,16 +87,16 @@ const Dashboard = () => {
         onClick={toggleMode} 
         style= {{ 
           position: "absolute", 
-          top: "110px", 
-          left: "45px", 
-          width: "200px", 
-          height: "60px", 
+          top: "15.82vh", 
+          left: "6.47vh", 
+          width: "28.77vh", 
+          height: "8.63vh", 
           backgroundColor: darkMode ? "#f0f0f0" : "#333", 
           color: darkMode ? "black" : "white", 
-          borderRadius: "8px", 
+          borderRadius: "1.15vh", 
           border: "none", 
           cursor: "pointer", 
-          fontSize: "38px",
+          fontSize: "5.46vh",
           display: "flex",       
           alignItems: "center",     
           justifyContent: "center" 
@@ -110,15 +109,15 @@ const Dashboard = () => {
         onClick={toggleMode} 
         style= {{ 
           position: "absolute", 
-          top: "180px", 
-          left: "45px", 
-          width: "200px", 
-          height: "50px", 
+          top: "25.9vh", 
+          left: "6.47vh", 
+          width: "28.77vh", 
+          height: "7.19vh", 
           backgroundColor: "gray", 
-          borderRadius: "8px", 
+          borderRadius: "1.15vh", 
           border: "none", 
           cursor: "pointer", 
-          fontSize: "38px",
+          fontSize: "5.46vh",
           display: "flex",       
           alignItems: "center",     
           justifyContent: "center" 
@@ -127,68 +126,205 @@ const Dashboard = () => {
       </button>
       </Link>
 
-      <div className="blanka1" style={{ 
-        position: "absolute", 
-        top: "15px", 
-        right: "45px", 
-        width: "1200px", 
-        height: "75px", 
-        backgroundColor: "red", 
-        borderRadius: "8px", 
-        display: "flex", 
-        alignItems: "center", 
-        justifyContent: "center", 
-      }}>
-        ROAD RUNNERS
+      <div className="blanka1" style={{ position: "absolute", top: "2.15vh", left: "43.45vh", width: "174vh", height: "10.79vh", backgroundColor: "red", borderRadius: "1.15vh", display: "flex", alignItems: "center", justifyContent: "center" ,fontSize:"7.63vh"}}>
+        ROAD-RUNNERS
       </div>
-       <div className = "blanka1" style={{ display: "flex", justifyContent: "space-between", position: "absolute", top: "110px", right: "45px", width: "1200px" }}>
-              {[bugs, tweety, sy, wile].map((image, index) => (
-                <div key={index} style={{ width: "280px", height: "120px", backgroundColor: "gray", borderRadius: "8px", overflow: "hidden", position: "relative" }}>
-                  <img src={image} alt={`Image ${index + 1}`} style={{ width: "100%", height: "100%", objectFit: "cover", opacity: 0.4 }} />
-                  <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "25px", fontWeight: "bold", textAlign: "center", padding: "10px" ,color:"#FF8C00"}}>
-                    {["Reputation score: XX", "Active Complaints: XXX", "User Complaints: XX", "Registered Complaints: XX"][index]}
-                  </div>
-                </div>
-              ))}
-            </div>
+     
+      <div className="blanka1" style={{ 
+  position: "absolute", 
+  overflow : "hidden",
+  top: "15.75vh", 
+  left: "43.45vh", 
+  width: "38vh", 
+  height: "16vh", 
+  display: "flex", 
+  flexDirection: "column", 
+  alignItems: "center", 
+  justifyContent: "center", 
+  borderRadius: "1.15vh", 
+  border: "none", 
+  padding: "0.72vh", 
+  lineHeight: "1.5", 
+  zIndex: "1",
+  color: "rgb(235, 252, 0)",
+  backgroundColor:"gray",
+  fontSize : "4.5vh",
+  textAlign: "center"
+}}>
+  <img 
+    src={bugs} 
+    alt="Road Runners Logo" 
+    style={{
+        width: "100%", 
+        height: "100%", 
+        objectFit: "cover", 
+        opacity: 0.2, 
+        position: "absolute", 
+        top: 0, 
+        left: 0, 
+        zIndex: "0",
+        backgroundColor: "rgb(0, 0, 0)"
+    }}
+  />
+  Reputation Score : <br/> XX
+</div>
+
+     
+<div className="blanka1" style={{ 
+  position: "absolute", 
+  overflow : "hidden",
+  top: "15.75vh", 
+  left: "88.45vh", 
+  width: "38vh", 
+  height: "16vh", 
+  display: "flex", 
+  flexDirection: "column", 
+  alignItems: "center", 
+  justifyContent: "center", 
+  borderRadius: "1.15vh", 
+  border: "none", 
+  padding: "0.72vh", 
+  lineHeight: "1.5", 
+  zIndex: "1",
+  color: "rgb(235, 252, 0)",
+  backgroundColor:"gray",
+  fontSize : "4.5vh",
+  textAlign: "center"
+}}>
+  <img 
+    src={tweety} 
+    alt="Road Runners Logo" 
+    style={{
+        width: "100%", 
+        height: "100%", 
+        objectFit: "cover", 
+        opacity: 0.2, 
+        position: "absolute", 
+        top: 0, 
+        left: 0, 
+        zIndex: "0"
+    }}
+  />
+  Active Complaints : <br/> XXX
+</div>
         
+            
+<div className="blanka1" style={{ 
+  position: "absolute", 
+  overflow : "hidden",
+  top: "15.75vh", 
+  left: "133.45vh", 
+  width: "38vh", 
+  height: "16vh", 
+  display: "flex", 
+  flexDirection: "column", 
+  alignItems: "center", 
+  justifyContent: "center", 
+  borderRadius: "1.15vh", 
+  border: "none", 
+  padding: "0.72vh", 
+  lineHeight: "1.5", 
+  zIndex: "1",
+  color: "rgb(235, 252, 0)",
+  backgroundColor:"gray",
+  fontSize : "4.5vh",
+  textAlign: "center"
+}}>
+  <img 
+    src={sy} 
+    alt="Road Runners Logo" 
+    style={{
+        width: "100%", 
+        height: "100%", 
+        objectFit: "cover", 
+        opacity: 0.2, 
+        position: "absolute", 
+        top: 0, 
+        left: 0, 
+        zIndex: "0"
+    }}
+  />
+  User Complaints : <br/> XX
+</div>
+
+     
+<div className="blanka1" style={{ 
+  position: "absolute", 
+  overflow : "hidden",
+  top: "15.75vh", 
+  left: "178.45vh", 
+  width: "38vh", 
+  height: "16vh", 
+  display: "flex", 
+  flexDirection: "column", 
+  alignItems: "center", 
+  justifyContent: "center", 
+  borderRadius: "1.15vh", 
+  border: "none", 
+  padding: "0.72vh", 
+  lineHeight: "1.5", 
+  zIndex: "1",
+  color: "rgb(235, 252, 0)",
+  backgroundColor:"gray",
+  fontSize : "4.5vh",
+  textAlign: "center"
+}}>
+  <img 
+    src={wile} 
+    alt="Road Runners Logo" 
+    style={{
+        width: "100%", 
+        height: "100%", 
+        objectFit: "cover", 
+        opacity: 0.2, 
+        position: "absolute", 
+        top: 0, 
+        left: 0, 
+        zIndex: "0",
+        backgroundColor: "rgba(0, 0, 0, 0.5)"
+    }}
+  />
+  Registered Complaints : <br/> XX
+</div>
+
+
       <div style={{ 
         position: "absolute", 
-        top: "270px", 
-        left: "770px", 
-        width: "700px", 
-        height: "720px", 
+        top: "38.85vh", 
+        left: "110.79vh", 
+        width: "100.72vh", 
+        height: "102vh", 
         backgroundColor: "#D3D3D3", 
-        borderRadius: "8px", 
+        borderRadius: "1.15vh", 
         display: "flex", 
         flexDirection: "column", 
         alignItems: "center", 
         justifyContent: "center", 
-        padding: "20px", 
-        boxShadow: "2px 2px 10px rgba(0,0,0,0.2)"
+        padding: "2.87vh", 
+        boxShadow: "0.28vh 0.28vh 1.4vh rgba(0,0,0,0.2)"
       }}>
         
-        <h3 className="borg1" style={{ marginBottom: "10px" }}>Upload File</h3>
-        <p className="pulp" style={{ fontSize: "30px", color: "gray", marginBottom: "20px" }}>Upload max size: 25MB</p>
+        <h3 className="borg1" style={{ marginBottom: "1.43vh" }}>Upload File</h3>
+        <p className="pulp" style={{ fontSize: "4.31vh", color: "gray", marginBottom: "2.86vh" }}>Upload max size: 25MB</p>
 
         <form onSubmit={handleSubmit}>
         <label className="custom-file-label">
-  Choose File
-  <input type="file" className="hidden-file-input" accept=".jpg,.jpeg,.png,.mp4,.mkv" onChange={handleFileChange} />
-</label>
+            Choose File
+        <input type="file" className="hidden-file-input" accept=".jpg,.jpeg,.png,.mp4,.mkv" onChange={handleFileChange} />
+        </label>
 
-          {selectedFile && <p style={{ marginTop: "10px" , fontSize:"40px"}}>Selected File: {selectedFile.name}</p>}
-          <button type="submit" style={{ position:"absolute" , top : "535px" , left : "380px" , marginTop: "20px", padding: "10px 20px", borderRadius: "8px", border: "none", backgroundColor: "#4CAF50", color: "white", cursor: "pointer", fontSize: "16px" }}>Upload</button>
+          {selectedFile && <p style={{ marginTop: "1.43vh" , fontSize:"5.72vh"}}>Selected File: {selectedFile.name}</p>}
+          <button type="submit" style={{ position:"absolute" , top : "76.3vh" , left : "60vh" , marginTop: "2.87vh", padding: "1.43vh 2.87vh", borderRadius: "1.15vh", border: "none", backgroundColor: "#4CAF50", color: "white", cursor: "pointer", fontSize: "2.3vh",height : "6.5vh" }}>Upload</button>
         </form>
       </div>
 
 
       <div style={{ 
         position: "absolute", 
-        top: "270px", 
-        left: "45px", 
-        width: "700px", 
-        height: "750px", 
+        top: "38.85vh", 
+        left: "6.47vh", 
+        width: "100.72vh", 
+        height: "107.91vh", 
         backgroundColor: "gray", 
         overflow: "hidden", 
         position: "relative" 
@@ -209,6 +345,7 @@ const Dashboard = () => {
 
 <div className = "pulp" style ={{ 
   position: "absolute", 
+  overflow : "hidden",
   top: 0, 
   left: 0, 
   width: "100%", 
@@ -217,7 +354,7 @@ const Dashboard = () => {
   flexDirection: "column", 
   alignItems: "center", 
   justifyContent: "center", 
-  padding: "5px", 
+  padding: "0.72vh", 
   lineHeight: "1.5", 
   zIndex: "1",
   textAlign: "center",
