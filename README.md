@@ -36,6 +36,7 @@ Road Runners provides a platform where:
 ## Technical Architecture: ##
 
 **Frontend Development**
+
 The frontend of Road-Runners is designed to be intuitive and user-friendly, allowing easy report submissions and seamless user interaction.
 
 *Tech Stack:*
@@ -49,7 +50,9 @@ The frontend of Road-Runners is designed to be intuitive and user-friendly, allo
   -  Dark Mode Toggle - Enhances user experience with a light/dark mode option.
   -  Authentication System: Secure login system integrated via Google OAuth to only allow verified BITS mail ID login.
 
+
 **Backend Development**
+
 The backend is responsible for processing user requests, securely storing data, and handling blockchain transactions.
 
 *Tech Stack:*
@@ -64,8 +67,11 @@ The backend is responsible for processing user requests, securely storing data, 
   -  Validator System - Implements a consensus mechanism where multiple users verify complaints before they reach authorities(to be implemented).
   -  Role-based Access Control - Different levels of access for general users, validators, and campus security(to be implemented).
 
+
 **Database Architecture & Data Management**
+
 *Database:* MongoDB (NoSQL) is used for its scalability and flexibility in handling diverse data structures.
+
 
 **Interplanetary File System (IPFS) & Blockchain Implementation**
 
