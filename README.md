@@ -48,7 +48,13 @@ The frontend of Road-Runners is designed to be intuitive and user-friendly, allo
   -  Incident Reporting - Users can submit reports with relevant media (images/videos) attached.
   -  Dashboard - Displays user statistics, active complaints, and status updates.
   -  Dark Mode Toggle - Enhances user experience with a light/dark mode option.
-  -  Authentication System: Secure login system integrated via Google OAuth to only allow verified BITS mail ID login.
+  -  Authentication System - Secure login system integrated via Google OAuth to only allow verified BITS mail ID login.
+  -  Reputation Score -  Uses a reputation score to aid in validation of   uploaded content
+  - +5 if uploaded content is correctly verified.
+  - -15 if it is judged to be fake.
+  - Everyone starts with a reputation score of 50
+  - If it goes below 25, only videos can be uploaded by that user and that will also be verified by a community vote along with our technical methods.
+  - If it goes below 10 then the user’s account will be banned permanently.
 
 
 **Backend Development**
@@ -89,6 +95,14 @@ The backend is responsible for processing user requests, securely storing data, 
   - Migration to a more scalable blockchain solution (e.g., Polygon for lower transaction fees).
   - Expanding IPFS storage efficiency for large-scale media handling.
   - Mobile App Development for seamless access and reporting.
+  - Validation Workflow - 3-5 validators randomly selected from qualified  pool, who independently review evidence against violation criteria. Each validation decision recorded as blockchain transaction. If validated, notification sent to campus security.
+
+**Privacy & Security Measures:**
+  - Automatic face blurring for pedestrians in media
+  - License plate visible only to authorized security personnel
+  - End-to-end encryption for all communication
+
+
 
 ## How to Run the Project Locally ##
 
