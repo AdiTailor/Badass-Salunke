@@ -113,19 +113,21 @@ The backend is responsible for processing user requests, securely storing data, 
 
 **Installation Steps**
 
-#Clone the repo: 
+# Clone the repo: 
 *git clone https://github.com/AdiTailor/Badass-Salunke.git*
 
-#Navigate into the Project Directory:
+# Navigate into the Project Directory:
 *cd Badass-Salunke/src*
 
-#Start the backend server:
+# Start the backend server:
 *cd backend*
 *node server.js*
 
-#Start the frontend server:
+# Start the frontend server:
 *npm run dev*
 
+# Ensure ipfs is installed and ipfs daemon is started, also change the port with this command
+*ipfs config Addresses.API "/ip4/127.0.0.1/tcp/8119"*
 
 ## DEMO LINK: ##
 https://drive.google.com/file/d/1FWrx1o6Rr4fKxaoPBEQncNBrzfkN2Q8O/view?usp=sharing
