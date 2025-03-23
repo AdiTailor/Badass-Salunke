@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./fonts.css";
+import googlelogo from "./google-logo.png"; // Use correct path
 
 const MainPage = () => {
   return (
@@ -50,22 +51,16 @@ const MainPage = () => {
         }}
       >
        <h1 className="looney-title">WELCOME TO ROAD-RUNNERS!</h1>
-
-
+        <div>
+        <button style={{ width: "80%", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid #ccc", padding: "12px", borderRadius: "8px", color: "white", marginBottom: "12px", backgroundColor: "#4B5563" }}>
+                 <img src={googlelogo} alt="Google" style={{ width: "12px", height: "12px", marginRight: "8px" }} />
+                 Login with Google
+               </button>
+               </div>
         {/* Buttons Section */}
         <div style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
-          <Link to="/login">
-            <button style={{ padding: "0.5rem 1.5rem", backgroundColor: "#1E40AF", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }}>
-              Login
-            </button>
-          </Link>
-          <Link to="/signup">
-            <button style={{ padding: "0.5rem 1.5rem", backgroundColor: "#15803D", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }}>
-              Sign Up
-            </button>
-          </Link>
           <Link to="/about">
-            <button style={{ padding: "0.5rem 1.5rem", backgroundColor: "#4B5563", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" }}>
+            <button style={{ position: "absolute", top : "200 px" , left : "675px",padding: "0.5rem 1.5rem", backgroundColor: "#4B5563", color: "white", border: "none", borderRadius: "5px", cursor: "pointer" ,width : "150px"}}>
               About
             </button>
           </Link>
