@@ -80,7 +80,8 @@ The backend is responsible for processing user requests, securely storing data, 
 
 
 **Interplanetary File System (IPFS) & Blockchain Implementation**
-
+  - Once a picture/video is uploaded, the video is saved to IPFS. This is a distributed file system, which ensures multiple copies of the required file.
+  - The blockchain will hold the metadata of the video uploaded. A group of validators are randomly chosen(their reputation score crosses a certain threshold), and they determine whether the video is a valid one or not (yet to implement).
 
 
 
@@ -126,9 +127,8 @@ The backend is responsible for processing user requests, securely storing data, 
 *npm run dev*
 
 
-**Here's a few Screenshots of the various pages one would encounter upon using the app :**
-
-
+## DEMO LINK: ##
+https://drive.google.com/file/d/1FWrx1o6Rr4fKxaoPBEQncNBrzfkN2Q8O/view?usp=sharing
 
 
 
