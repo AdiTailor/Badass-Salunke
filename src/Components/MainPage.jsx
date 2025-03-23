@@ -1,28 +1,12 @@
-import React, { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React from "react";
+import { Link } from "react-router-dom";
 import "./fonts.css";
-import googlelogo from "./google-logo.png"; // Ensure correct path
+import googlelogo from "./google-logo.png"; // Use correct path
 
 const MainPage = () => {
-  const navigate = useNavigate();
-
-  // Function to handle Google login
-  const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:5173/auth/google";
-  };
-
-  // Extract JWT from URL after OAuth callback
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const token = urlParams.get("token");
-    if (token) {
-      localStorage.setItem("token", token);
-      navigate("/dashboard", { replace: true });
-    }
-  }, [navigate]);
   return (
     <div style={{ position: "relative", width: "100vw", height: "100vh", overflow: "hidden" }}>
-      {/* Background Image */}
+      {/* Background Image Wrapper */}
       <div
         style={{
           position: "absolute",
@@ -39,7 +23,7 @@ const MainPage = () => {
         }}
       />
 
-      {/* Dark Overlay */}
+      {/* Dark Overlay for Contrast */}
       <div 
         style={{
           position: "absolute",
@@ -66,43 +50,17 @@ const MainPage = () => {
           zIndex: 2
         }}
       >
-        <h1 className="looney-title">WELCOME TO ROAD-RUNNERS!</h1>
-
-        {/* Buttons Container */}
-        <div style={{ display: "flex", gap: "20px", marginTop: "1.5rem" }}>
-          {/* Google Login Button */}
-          <button 
-            onClick={handleGoogleLogin}
-            style={{
-              width: "200px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              border: "1px solid #ccc",
-              padding: "12px",
-              borderRadius: "8px",
-              color: "white",
-              backgroundColor: "#4B5563",
-              cursor: "pointer",
-            }}
-          >
-            <img src={googlelogo} alt="Google" style={{ width: "20px", height: "20px", marginRight: "8px" }} />
-            Login with Google
-          </button>
-
-          {/* About Button */}
+       <h1 className="looney-title">WELCOME TO ROAD-RUNNERS!</h1>
+        <div>
+        <button style={{ width: "80%", display: "flex", alignItems: "center", justifyContent: "center", border: "0.14vh solid #ccc", padding: "1.72vh", borderRadius: "1.15vh", color: "white", marginBottom: "1.72vh", backgroundColor: "#4B5563" }}>
+                 <img src={googlelogo} alt="Google" style={{ width: "2.30vh", height: "2.30vh", marginRight: "1.15vh" }} />
+                 Login with Google
+               </button>
+               </div>
+        {/* Buttons Section */}
+        <div style={{ display: "flex", gap: "2.30vh", marginTop: "2.30vh" }}>
           <Link to="/about">
-            <button 
-              style={{
-                width: "200px",
-                padding: "12px",
-                backgroundColor: "#4B5563",
-                color: "white",
-                border: "none",
-                borderRadius: "8px",
-                cursor: "pointer",
-              }}
-            >
+            <button style={{ position: "relative", top : "40%" , left : "-12%",padding: "1.15vh 3.45vh", backgroundColor: "#4B5563", color: "white", border: "none", borderRadius: "0.72vh", cursor: "pointer" ,width : "9.5vw"}}>
               About
             </button>
           </Link>
@@ -111,22 +69,23 @@ const MainPage = () => {
 
       {/* Footer */}
       <div 
-        style={{
-          position: "absolute",
-          bottom: "-30px", 
-          left: "1rem",
-          color: "black",
-          fontSize: "2rem",
-          zIndex: 2
-        }}
-      >
-        <p>An initiative by students of BITS GOA</p>
-      </div>
+  style={{
+    position: "absolute",
+    bottom: "-4.31vh",  // Move it further down
+    left: "2.3vh",
+    color: "black",
+    fontSize: "4.6vh",
+    zIndex: 2
+  }}
+>
+  <p>An initiative by students of BITS GOA</p>
+</div>
 
-      {/* Catchphrase */}
-      <div className="pokemon" style={{ position: "absolute", bottom: "1rem", right: "1rem", zIndex: 2 }}>
-        <p>GOTTA CATCH 'EM ALL ...</p>
-      </div>
+
+      <div className="pokemon" style={{ position: "absolute", bottom: "2.3vh", right: "2.3vh", zIndex: 2 }}>
+  <p>GOTTA CATCH 'EM ALL ...</p>
+</div>
+
     </div>
   );
 };
