@@ -74,7 +74,7 @@ const Dashboard = () => {
       minHeight: "145vh", 
       width: "100vw", 
       position: "relative",
-    
+      overflowX : "auto",
       paddingBottom: "7.19vh"
     }}>
       {/* Pink Box at Top Left */}
@@ -146,7 +146,8 @@ const Dashboard = () => {
   padding: "0.72vh", 
   lineHeight: "1.5", 
   zIndex: "1",
-  color: "#003366",
+  color: "rgb(235, 252, 0)",
+  backgroundColor:"gray",
   fontSize : "4.5vh",
   textAlign: "center"
 }}>
@@ -157,11 +158,12 @@ const Dashboard = () => {
         width: "100%", 
         height: "100%", 
         objectFit: "cover", 
-        opacity: 0.4, 
+        opacity: 0.2, 
         position: "absolute", 
         top: 0, 
         left: 0, 
-        zIndex: "0"
+        zIndex: "0",
+        backgroundColor: "rgb(0, 0, 0)"
     }}
   />
   Reputation Score : <br/> XX
@@ -184,7 +186,8 @@ const Dashboard = () => {
   padding: "0.72vh", 
   lineHeight: "1.5", 
   zIndex: "1",
-  color: "#003366",
+  color: "rgb(235, 252, 0)",
+  backgroundColor:"gray",
   fontSize : "4.5vh",
   textAlign: "center"
 }}>
@@ -195,7 +198,7 @@ const Dashboard = () => {
         width: "100%", 
         height: "100%", 
         objectFit: "cover", 
-        opacity: 0.4, 
+        opacity: 0.2, 
         position: "absolute", 
         top: 0, 
         left: 0, 
@@ -221,7 +224,9 @@ const Dashboard = () => {
   border: "none", 
   padding: "0.72vh", 
   lineHeight: "1.5", 
-  zIndex: "1",color: "#003366",
+  zIndex: "1",
+  color: "rgb(235, 252, 0)",
+  backgroundColor:"gray",
   fontSize : "4.5vh",
   textAlign: "center"
 }}>
@@ -232,7 +237,7 @@ const Dashboard = () => {
         width: "100%", 
         height: "100%", 
         objectFit: "cover", 
-        opacity: 0.4, 
+        opacity: 0.2, 
         position: "absolute", 
         top: 0, 
         left: 0, 
@@ -259,7 +264,8 @@ const Dashboard = () => {
   padding: "0.72vh", 
   lineHeight: "1.5", 
   zIndex: "1",
-  color: "#003366",
+  color: "rgb(235, 252, 0)",
+  backgroundColor:"gray",
   fontSize : "4.5vh",
   textAlign: "center"
 }}>
@@ -270,11 +276,12 @@ const Dashboard = () => {
         width: "100%", 
         height: "100%", 
         objectFit: "cover", 
-        opacity: 0.4, 
+        opacity: 0.2, 
         position: "absolute", 
         top: 0, 
         left: 0, 
-        zIndex: "0"
+        zIndex: "0",
+        backgroundColor: "rgba(0, 0, 0, 0.5)"
     }}
   />
   Registered Complaints : <br/> XX
