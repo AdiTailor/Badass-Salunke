@@ -9,7 +9,7 @@ require("./config/passport");
 
 // Import authentication routes
 const authRoutes = require("./routes/auth");
-
+const uploadRoutes = require("./routes/upload");
 const app = express();
 
 // CORS Middleware (Allows frontend requests)
@@ -27,10 +27,11 @@ app.use(
 // Initialize Passport
 app.use(passport.initialize());
 app.use(passport.session());
+app.use("/uploads", express.static("uploads"));
 
 // Use Auth Routes (THIS IS IMPORTANT)
 app.use("/auth", authRoutes);
-
+app.use("/uploads", uploadRoutes);
 const connectDB = require("./config/db");
 connectDB();
 // Start Server
